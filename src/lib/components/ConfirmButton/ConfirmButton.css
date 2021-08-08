@@ -1,0 +1,14 @@
+/* 
+.ConfirmButton{
+	outline: none !important;
+	border: none;
+	border-radius: 15px;
+	
+	color: var(--freeButtonTextColor);
+	background-color: var(--freeButtonNeutralBG);
+	
+	font-size: 11pt;
+	font-weight: bold;
+	padding: 0px 6px;
+	box-sizing: border-box;
+} */

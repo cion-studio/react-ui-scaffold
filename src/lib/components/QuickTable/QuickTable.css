@@ -1,0 +1,29 @@
+.QuickTable{
+	width: 100%;
+}
+
+.QuickTable .QuickTableRow,
+.tableHeaders {
+	display: flex;
+	padding: 10px 0;
+}
+
+.QuickTable .QuickTableRow {
+	flex-grow: 1;
+}
+
+.QuickTable .headerCell{
+	font-weight: 600;
+}
+
+.QuickTable .cellContainer{
+	display: flex;
+	align-items: center;
+	padding: 0 10px;
+}
+
+.QuickTable .cell{
+	width: 100%;
+}
+
+

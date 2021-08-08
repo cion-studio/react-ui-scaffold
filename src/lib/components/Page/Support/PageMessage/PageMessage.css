@@ -1,0 +1,27 @@
+.PageMessage .message{
+	border: 1px solid var(--borderColor);
+	padding: 10px;
+	border-radius: var(--largeRadius);
+	transition: all 200ms ease;
+	position: absolute;
+	z-index: 200;
+	background-color: var(--cardBG);
+	margin-top: 5px;
+	color: var(--mainTextColor);
+}
+
+.PageMessage .message.clickable{
+	cursor: pointer;
+}
+
+.PageMessage .loadingContainer{
+	padding-right: 10px;
+}
+
+.PageMessage .loadingContainer .Loading{
+	color: var(--lightTextColor);
+}
+
+.PageMessage .loadingContainer:empty{
+	display: none;
+}

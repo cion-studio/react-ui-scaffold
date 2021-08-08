@@ -1,0 +1,12 @@
+.QuickTableRow{
+	padding: 10px 0px;
+}
+
+.QuickTableRow.hover{
+	background-color: var(--bodyBG);
+	border-radius: var(--largeRadius);
+}
+
+.QuickTableRow.hover:hover{
+	filter: brightness(97%);
+}

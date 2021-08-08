@@ -1,0 +1,182 @@
+.menuButtonContainer{
+	padding: 0;
+	margin: 0;
+}
+
+.MenuButton{
+	outline: none !important;
+	border: none;
+	font-size: inherit;
+	font-weight: inherit;
+	box-sizing: border-box;
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+}
+
+.MenuButton:not(.button){
+	background-color: transparent;
+	color: inherit;
+}
+
+.MenuButton:hover{
+	filter: brightness(95%)
+}
+
+.MenuButton:active{
+	filter: brightness(90%)
+}
+
+.MenuButton.locked{
+	cursor: default;
+	filter: none;
+}
+
+.MenuButton .smallIcon{
+	font-size: 8pt;
+}
+
+.dropdown-menu{
+	background-color: var(--cardBG);
+	padding: 0;
+	border-radius: var(--smallRadius);
+	overflow: hidden;
+	max-width: max-content !important;
+}
+
+.Menu{
+	background-color: var(--bodyBG);
+	color: var(--mainTextColor);
+	padding-top: 7px;
+	padding-top: 0;
+	position: relative;
+	z-index: 900;
+	overflow-x: visible;
+	border: 1px solid var(--borderColor);
+}
+
+.MenuButton .notifications{
+	position: absolute;
+	top: -10px;
+	right: -10px;
+	font-size: 9pt;
+	color: white;
+	background-color: var(--negativeAccentColor);
+	font-weight: bold;
+	border-radius: var(--smallRadius);;
+	padding: 2px 6px;
+}
+
+.Menu>div{
+	max-height: inherit;
+}
+
+/* Tabbed menus */
+.Menu .InfoTabContainer{
+	background-color: transparent;
+}
+
+.Menu .nav{
+	padding: 0 10px;
+	margin: 0 !important;
+	position: sticky;
+	top:0;
+	width: 100% !important;
+	background-color: var(--cardBG);
+}
+
+.Menu .InfoTabContainer .nav-tabs,
+.Menu .InfoTabContainer .nav-tabs a{
+	width: fit-content;
+	background-color:var(--cardBG) !important;
+	color: var(--labelColor) !important;
+	text-align: left;
+	padding: 0;
+	margin-left: 10px;
+	z-index: 3;
+	filter: none;
+	font-size: 13pt;
+	height: 30px;
+	padding-top: 0px !important;
+}
+
+.Menu .InfoTabContainer .nav-tabs a.active{
+	text-shadow: 1px 0px 0px var(--labelColor);
+	border-bottom-color: var(--labelColor) !important;
+	border-bottom-width: 3px !important;
+}
+
+.Menu .InfoTabContainer, .tab-content, .tab-pane, 
+.InfoTab{
+	max-height: inherit;
+}
+
+.Menu .InfoTabContainer{
+	overflow-y: hidden;
+	
+}
+
+/* Submenus */
+.Menu .MenuButton{
+	position: relative;
+}
+
+.Menu .subMenuIcon{
+	position: absolute;	
+	right: 5px;
+	background-color: var(--cardBG);
+}
+
+.Menu .menuButtonContainer{
+	width: 100%;
+}
+
+/* Internal Utility Classes */
+.Menu button.wide:not(.FreeButton){
+	border: none;
+	background-color: var(--cardBG);
+	color: var(--mainTextColor);
+	text-align: left;
+	font-size: inherit;
+}
+
+.Menu button.wide.neutral:not(.FreeButton), 
+.Menu button.wide.positive:not(.FreeButton), 
+.Menu button.wide.negative:not(.FreeButton)
+{
+	color: var(--buttonAccentColor);
+}
+
+.Menu button.wide:hover{
+	filter: brightness(97%);
+}
+
+.Menu button.wide:active{
+	filter: brightness(95%);
+}
+
+.Menu h1{
+	font-size: 17pt;
+	margin: 0;
+	padding: 10px 10px;
+	text-align: left;
+	color: var(--neutralAccentColor);
+}
+
+.Menu h3{
+	font-size: 13pt;
+	margin: 0;
+	padding: 5px 10px;
+}
+
+.Menu h4{
+	font-size: 11pt;
+	margin: 0;
+	padding: 0px 10px;
+	padding-bottom: 5px;
+}
+
+.Menu .panel{
+	padding: 10px 0;
+	border-top: 1px solid var(--borderColor);
+}

@@ -1,0 +1,16 @@
+{
+	"editor.formatOnPaste": true,
+	"editor.formatOnSave": false,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true,
+		"source.fixAll.stylelint": true
+	},
+	"files.insertFinalNewline": true,
+	"eslint.validate": [
+		"javascript",
+		"typescript",
+	],
+	"eslint.workingDirectories": [
+		"/src"
+	]
+}

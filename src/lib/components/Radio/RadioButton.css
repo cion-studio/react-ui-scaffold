@@ -1,0 +1,20 @@
+.RadioButton{
+	padding: 5px;
+}
+
+.RadioButton label, .RadioButton .input{
+	cursor: pointer;
+}
+
+.RadioButton input{
+	margin-right: 5px;
+}	
+
+.RadioButton label{
+	color: var(--mainTextColor);
+	margin-bottom: 0;
+}
+
+.RadioButton.locked{
+	cursor: default !important;
+}

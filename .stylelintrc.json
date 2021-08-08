@@ -1,0 +1,7 @@
+{
+	"rules": {
+		"indentation": "tab",
+		"no-descending-specificity": null,
+		"no-missing-end-of-source-newline": true
+	}
+}
