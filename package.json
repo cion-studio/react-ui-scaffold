@@ -1,6 +1,6 @@
 {
   "name": "react-ui-scaffold",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
@@ -8,7 +8,7 @@
     "bootstrap": "^5.0.0",
     "react-bootstrap": "^1.6.0"
   },
-  "types": "./index.d.ts",
+  "types": "./types.d.ts",
   "scripts": {
     "copy-files": "copyfiles -u 2 src/lib/**/*.css dist",
     "post-build": "rimraf dist/ && tsc && yarn copy-files",
