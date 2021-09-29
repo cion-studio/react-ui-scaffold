@@ -1,6 +1,6 @@
 {
   "name": "react-ui-scaffold",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
@@ -10,11 +10,9 @@
   },
   "types": "./index.d.ts",
   "scripts": {
-    "start": "react-scripts start",
-    "client": "npm start",
     "copy-files": "copyfiles -u 2 src/lib/**/*.css dist",
     "post-build": "rimraf dist/ && tsc && yarn copy-files",
-    "build": "tsc -p ./tsconfig-publish.json && npm run post-build && cp package.json dist && cp README.md dist",
+    "build": "tsc -p . && npm run post-build && cp package.json dist && cp README.md dist",
     "deploy": "yarn version && npm run build && cd dist && npm publish"
   },
   "eslintConfig": {
