@@ -8,12 +8,13 @@
     "bootstrap": "^5.0.0",
     "react-bootstrap": "^1.6.0"
   },
+  "types": "./index.d.ts",
   "scripts": {
     "start": "react-scripts start",
     "client": "npm start",
     "copy-files": "copyfiles -u 2 src/lib/**/*.css dist",
     "post-build": "rimraf dist/ && tsc && yarn copy-files",
-    "build": "tsc -p . && npm run post-build && cp package.json dist && cp README.md dist",
+    "build": "tsc -p ./tsconfig-publish.json && npm run post-build && cp package.json dist && cp README.md dist",
     "deploy": "yarn version && npm run build && cd dist && npm publish"
   },
   "eslintConfig": {

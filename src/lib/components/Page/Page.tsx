@@ -2,13 +2,14 @@ import React from 'react'
 import './Page.css'
 import Loading from '../Loading/Loading'
 import PageMessage from './Support/PageMessage/PageMessage'
+import PageMessageContents  from './PageMessageContents'
 
 interface PageProps {
 	className?: String
 	children?: any
 	loading?: any
 	error?: any
-	message?: any
+	message?: PageMessageContents
 }
 
 export default function Page({

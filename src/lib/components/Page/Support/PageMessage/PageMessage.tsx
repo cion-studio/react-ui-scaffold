@@ -1,10 +1,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useEffect, useState } from 'react'
 import Loading from '../../../Loading/Loading'
+import PageMessageContents from '../../PageMessageContents'
 import './PageMessage.css'
 
 interface PageMessageProps {
-	message: any
+	message?: PageMessageContents
 }
 
 export default function PageMessage({ message }: PageMessageProps) {
@@ -33,7 +34,7 @@ export default function PageMessage({ message }: PageMessageProps) {
 	}
 	
 	function messageClickHandler() {
-		if (message.onClick) {
+		if (message?.onClick) {
 			message.onClick()
 		}
 	}

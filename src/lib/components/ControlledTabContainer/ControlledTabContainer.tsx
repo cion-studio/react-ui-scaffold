@@ -29,7 +29,6 @@ export default function ControlledTabContainer(props: ControlledTabContainerProp
 					</div>)
 				} else return null
 			})}
-			
 		</div>
 	)
 }
