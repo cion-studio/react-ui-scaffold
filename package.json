@@ -1,6 +1,6 @@
 {
   "name": "react-ui-scaffold",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
