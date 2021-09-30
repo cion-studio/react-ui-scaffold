@@ -1,5 +1,6 @@
 .QuickTableRow{
 	padding: 10px 0px;
+	white-space: nowrap;
 }
 
 .QuickTableRow.hover{

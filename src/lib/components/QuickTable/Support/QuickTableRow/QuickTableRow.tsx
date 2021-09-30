@@ -1,9 +1,10 @@
 import React from 'react'
+import { QuickTableHeaders } from '../../types/QuickTableTypes'
 import './QuickTableRow.css'
 
 interface QuickTableRowProps {
 	row: any
-	headers: any
+	headers: QuickTableHeaders
 	defaultWidth: number | string
 	cellStyle: any
 	rowStyle: Function
@@ -30,9 +31,9 @@ export default function QuickTableRow({
 				
 				let cellContents
 				
-				if (headers[h].component){
-					const Comp = headers[h].component
-					
+				const Comp = headers[h].component
+				
+				if (Comp){
 					cellContents = <Comp
 						row={row}
 						cell={row[h]}
@@ -47,11 +48,15 @@ export default function QuickTableRow({
 					cellContents = row[h]
 				}
 				
-				if (headers[h].format){
-					cellContents = headers[h].format(row[h], row)
+				const formatter = headers[h].format
+				
+				if (formatter){
+					cellContents = formatter(row[h], row)
 				}
 				
-				let appliedStyle = headers[h].cellStyle ? headers[h].cellStyle(row[h], row) : {}
+				const styler = headers[h].cellStyle
+				
+				let appliedStyle = styler ? styler(row[h], row) : {}
 				appliedStyle = { ...appliedStyle, ...cellStyle(row[h], row) }
 
 				

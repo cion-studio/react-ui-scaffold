@@ -1,10 +1,11 @@
 import React from 'react'
+import { QuickTableHeaders } from './types/QuickTableTypes'
 import './QuickTable.css'
 import QuickTableRow from './Support/QuickTableRow/QuickTableRow'
 
 interface QuickTableProps {
 	data: any[]
-	headers: any
+	headers: QuickTableHeaders,
 	defaultWidth?: number
 	headerStyle: object
 	primaryKey: string

@@ -13,3 +13,4 @@ export { default as RadioGroup } from './components/Radio/RadioGroup'
 export { default as TextBox } from './components/TextBox/TextBox'
 
 export type { default as PageMessageContents } from './components/Page/PageMessageContents'
+export type { QuickTableHeaders } from './components/QuickTable/types/QuickTableTypes'
