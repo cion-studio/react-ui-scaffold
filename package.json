@@ -10,10 +10,11 @@
     "react-bootstrap": "^1.6.0"
   },
   "scripts": {
-    "copy-files": "copyfiles -u 2 src/lib/**/*.css dist",
+    "copy-files": "copyfiles -u 1 lib/**/*.css dist",
     "post-build": "rimraf dist/ && tsc && yarn copy-files",
     "build": "tsc -p . && npm run post-build && cp package.json dist && cp README.md dist",
-    "deploy": "yarn version && npm run build && cd dist && npm publish"
+    "deploy": "yarn version && npm run build && cd dist && npm publish",
+    "sandbox": "cd sandbox && npm start"
   },
   "eslintConfig": {
     "extends": [

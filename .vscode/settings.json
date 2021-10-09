@@ -11,6 +11,7 @@
 		"typescript",
 	],
 	"eslint.workingDirectories": [
-		"/src"
+		"/src",
+		"/lib"
 	]
 }
