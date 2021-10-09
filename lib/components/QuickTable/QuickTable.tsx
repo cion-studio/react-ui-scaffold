@@ -7,12 +7,12 @@ interface QuickTableProps {
 	data: any[]
 	headers: QuickTableHeaders,
 	defaultWidth?: number
-	headerStyle: object
+	headerStyle?: object
 	primaryKey: string
 	className?: string
 	cellStyle?: Function
 	rowStyle?: Function
-	rowClassName: string
+	rowClassName?: string
 	hover?: boolean
 }
 
@@ -22,8 +22,8 @@ export default function QuickTable({
 	primaryKey,
 	defaultWidth = 100,
 	headerStyle,
-	cellStyle = () => {},
-	rowStyle = () => {},
+	cellStyle = () => ({}),
+	rowStyle = () => ({}),
 	className,
 	rowClassName,
 	hover

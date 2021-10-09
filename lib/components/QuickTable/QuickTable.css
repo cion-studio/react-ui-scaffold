@@ -1,10 +1,11 @@
 .QuickTable{
 	width: 100%;
+	overflow-x: auto;
 }
 
 .QuickTable .QuickTableRow,
 .tableHeaders {
-	display: flex;
+	white-space: nowrap;
 	padding: 10px 0;
 }
 
@@ -17,11 +18,16 @@
 }
 
 .QuickTable .cellContainer{
-	display: flex;
-	align-items: center;
+	display: inline-block;
+	padding: 5px 5px;
+	overflow: hidden;
 	padding: 0 10px;
+	white-space: nowrap;
 }
 
 .QuickTable .cell{
+	display: inline-block;
 	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
 }
