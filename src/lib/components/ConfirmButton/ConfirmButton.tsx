@@ -2,20 +2,20 @@ import React, { useState } from 'react'
 import './ConfirmButton.css'
 
 interface ConfirmButtonProps {
-	hidden: boolean,
-	locked: boolean,
-	onClick: Function,
-	style: object,
-	expandedStyle: object,
-	className: string,
+	hidden?: boolean,
+	locked?: boolean,
+	onClick?: Function,
+	style?: object,
+	expandedStyle?: object,
+	className?: string,
 	content: any,
 	expandedContent: any,
-	purpose: string,
-	loading: boolean,
-	title: string,
-	onExpand: Function,
-	onCollapse: Function,
-	disabled: boolean
+	purpose?: string,
+	loading?: boolean,
+	title?: string,
+	onExpand?: Function,
+	onCollapse?: Function,
+	disabled?: boolean
 }
 
 export default function ConfirmButton(props: ConfirmButtonProps) {

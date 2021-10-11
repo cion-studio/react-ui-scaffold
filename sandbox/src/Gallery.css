@@ -1,0 +1,6 @@
+.Gallery .story{
+	border: 1px solid var(--borderColor);
+	border-radius: 10px;
+	margin: 20px;
+	padding: 20px;
+}

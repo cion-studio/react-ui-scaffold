@@ -27,6 +27,6 @@
     "outDir": "./dist"
   },
   "include": [
-    "lib",
+    "src/lib",
   ]
 }

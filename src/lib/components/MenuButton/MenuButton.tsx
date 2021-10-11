@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { CSSProperties, useContext, useState } from 'react'
 import ReactDOM from 'react-dom'
 import menuContext from '../Contexts/menuContext'
 import './MenuButton.css'
@@ -7,13 +7,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretRight } from '@fortawesome/free-solid-svg-icons'
 
 interface DropMenuProps {
-	style: object
-	menuStyle: any
-	className: string
-	menuClass: string
-	onClickBody: React.MouseEventHandler<HTMLDivElement>
+	style?: object
+	menuStyle?: any
+	className?: string
+	menuClass?: string
+	onClickBody?: React.MouseEventHandler<HTMLDivElement>
 	MenuContent: any
-	menuProps: object
+	menuProps?: object
 }
 
 const dropMenu = React.forwardRef(
@@ -49,12 +49,12 @@ interface MenuButtonProps {
 	onClose?: Function
 	direction?: Direction
 	notifications?: number
-	notificationStyle?: object
+	notificationStyle?: CSSProperties
 	menuContent: any
 	menuProps?: object
-	menuStyle?: object
+	menuStyle?: CSSProperties
 	className?: string
-	style?: object
+	style?: CSSProperties
 	children?: any
 	title?: string,
 	permanent?:boolean,

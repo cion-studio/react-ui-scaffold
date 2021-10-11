@@ -1,7 +1,8 @@
 import React from 'react'
 
 interface DateBoxProps {
-	className: string
+	className: string,
+	[name:string]: any
 }
 
 export default function DateBox(props: DateBoxProps) {

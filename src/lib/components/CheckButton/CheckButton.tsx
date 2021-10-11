@@ -5,11 +5,11 @@ import { v4 as uuid } from 'uuid'
 interface CheckButtonProps {
 	value: any;
 	onChange: Function;
-	disabled: boolean;
-	checked: boolean;
+	disabled?: boolean;
+	checked?: boolean;
 	defaultChecked?: boolean;
-	style: object;
-	className: string;
+	style?: object;
+	className?: string;
 	children: React.ReactNode;
 }
 

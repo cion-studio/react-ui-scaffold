@@ -13,6 +13,6 @@
 	],
 	"eslint.workingDirectories": [
 		"/src",
-		"/lib"
+		"/sandbox"
 	]
 }
