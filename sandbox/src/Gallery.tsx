@@ -1,5 +1,5 @@
 import React from 'react'
-import { ConfirmButton, FreeButton } from '../../dist'
+import { ConfirmButton, FreeButton, MenuButton } from '../../dist'
 import './Gallery.css'
 
 export default function Gallery() {
@@ -18,8 +18,18 @@ export default function Gallery() {
 				<ConfirmButton
 					content={'Test'}
 					expandedContent={'Confirm'}
-					className='plain'
 				/>
+			</div>
+			
+			<div className="story">
+				<MenuButton
+					menuContent={()=><div style={{padding: '20px'}}>
+						<ConfirmButton
+							content={'Cion'}
+							expandedContent={'Studio'}
+						/>
+					</div>}
+				>Welcome</MenuButton>
 			</div>
 		</div>
 	)
