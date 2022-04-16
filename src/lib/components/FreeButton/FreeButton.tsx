@@ -11,9 +11,9 @@ interface FreeButtonProps{
 
 export default function FreeButton({ loading, onClick, className, children, ...props }: FreeButtonProps) {
 	
-	function clickHandler(){
+	function clickHandler(e:any){
 		if (onClick && !loading){
-			onClick()
+			onClick(e)
 		}
 	}
 	
