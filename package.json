@@ -9,7 +9,7 @@
     "copy-files": "copyfiles -u 2 src/lib/**/*.css dist",
     "post-build": "rimraf dist/ && tsc && yarn copy-files",
     "build": "tsc -p . && npm run post-build && cp src/package.json dist && cp README.md dist",
-    "deploy": "cd src && yarn version && cd .. && npm run build && cd dist && npm publish",
+    "deploy": "cd src && yarn version && cd .. && npm run build && cd dist && npm login && npm publish",
     "sandbox": "cd sandbox && npm start",
     "setup": "npm i && cd src && npm i && cd .. && cd sandbox && npm i"
   },

@@ -18,6 +18,7 @@ export default function Gallery() {
 				<ConfirmButton
 					content={'Test'}
 					expandedContent={'Confirm'}
+					loading
 				/>
 			</div>
 			

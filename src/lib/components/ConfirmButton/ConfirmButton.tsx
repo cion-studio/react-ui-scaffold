@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { FreeButton } from '../..'
 import './ConfirmButton.css'
 
 interface ConfirmButtonProps {
@@ -42,7 +43,7 @@ export default function ConfirmButton(props: ConfirmButtonProps) {
 	
 	const expandedClass = expanded ? ' expanded ' : ''
 	return (
-		<button
+		<FreeButton
 			className = {props.className + ' ConfirmButton ' + expandedClass + 'button'}
 			title={props.title}
 			disabled = {props.disabled}
@@ -50,8 +51,9 @@ export default function ConfirmButton(props: ConfirmButtonProps) {
 			onClick = {clickHandler}
 			style = {expanded ? { ...props.style, ...props.expandedStyle } : props.style}
 			onBlur = {blurHandler}
+			loading={props.loading}
 		>
 			{expanded ? props.expandedContent : props.content}
-		</button>
+		</FreeButton>
 	)
 }
