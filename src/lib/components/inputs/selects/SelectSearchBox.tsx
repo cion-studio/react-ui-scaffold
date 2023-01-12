@@ -1,5 +1,4 @@
 import React, { CSSProperties, useMemo, useRef, useState } from 'react'
-import Line from '../../../Line/Line'
 import '../inputs.css'
 import TextBox from '../TextBox'
 import { SelectBoxOption } from './SelectBox'
@@ -60,7 +59,7 @@ export default function SelectSearchBox({
 					value={search}
 					onChange={e => setSearch(e.target.value)}
 				/>
-				<Line/>
+				<div className="line"></div>
 			</div>
 		</SelectPanelView>
 	)

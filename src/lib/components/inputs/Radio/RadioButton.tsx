@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import './RadioButton.css'
-import radioContext from '../Contexts/radioContext'
+import radioContext from '../../Contexts/radioContext'
 
 interface RadioButtonProps {
 	children?: any
