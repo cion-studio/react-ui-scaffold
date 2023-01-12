@@ -1,0 +1,47 @@
+.SelectBox{
+	padding: 8px 10px;
+	font-weight: normal;
+	text-align: left;
+	position: relative;
+	height: 38px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.SelectBox.input:focus{
+	filter: none;
+}
+
+.SelectBox .caret{
+	position: absolute;
+	right: 0px;
+	top: 10px;
+	display: inline-block;
+	padding: 0 10px;
+}
+
+.selectBoxPanel .dropdownButtonItem{
+	font-weight: normal;
+}
+
+.selectBoxPanel{
+	overflow-y: auto;
+	overflow-x: hidden;
+	max-height: 250px;
+}
+
+.selectBoxPanel .searchContainer{
+	position: relative;
+}
+
+.selectBoxPanel .searchContainer .spinner{
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+
+.selectBoxPanel .searchContainer .line {
+	margin: 10px 0;
+	border-bottom: 1px solid var(--borderColor);
+}

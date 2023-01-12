@@ -1,0 +1,52 @@
+.PanelButton {
+	font-size: 15px;
+}
+
+.PanelButton.open{
+	background-color: var(--bodyBG);
+	filter: brightness(98%);
+}
+
+.panelButtonContainer{
+	display: inline-block;
+	position: relative;
+}
+
+.panelContainer {
+	position: fixed;
+	display: none;
+	z-index: 10;
+}
+
+.panelBody {
+	width: min-content;
+	max-height: calc(100vh - 5px);
+	overflow-y: auto;
+	background-color: white;
+	padding: 10px;
+	border: 1px solid var(--borderColor);
+	border-radius: var(--largeRadius);
+	box-shadow: rgba(0, 0, 0, 0.05) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.panelBody .button.dropdownButtonItem {
+	padding: 10px 10px;
+	width: min-content;
+	white-space: nowrap;
+	text-align: left;
+	width: 100%;
+	background-color: inherit;
+}
+
+.panelBody .dropdownButtonItem .icon {
+	display: inline-block;
+	padding-right: 10px;
+}
+
+.panelBody .dropdownButtonItem:hover {
+	filter: brightness(98%);
+}
+
+.panelBody .dropdownButtonItem:active {
+	filter: brightness(97%);
+}

@@ -1,0 +1,65 @@
+.popupBG{
+	position: fixed;
+	background-color: rgba(32, 32, 49, 0.3);
+	min-height: 100vh;
+	width: 100vw;
+	backdrop-filter: blur(10px);
+	cursor: pointer;
+	padding: 32px;
+	max-height: 100vh;
+	overflow-y: auto;
+}
+
+.Popup{
+	background-color: var(--cardBG);
+	border: 1px solid var(--borderColor);
+	border-radius: var(--largeRadius);
+	cursor: auto;
+	padding: 20px;
+	position: relative;
+}
+
+.Popup {
+	max-height: 90vh;
+	overflow: auto;
+}
+
+.Popup .titleBar {
+	padding: 10px 10px 25px 10px;
+	text-align: center;
+}
+
+.Popup h1:empty{
+	display: none;
+}
+
+.Popup h1{
+	margin: 0;
+}
+
+.Popup .exitIcon {
+	font-size: 20px;
+	color: #A2A2AF;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+.mobile .popupBG{
+	padding: 0;
+}
+
+.mobile .Popup{
+	height: 100%;
+	max-height: unset;
+	
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow-y: auto;
+	border-radius: 0;
+
+	padding: 20px;
+}
