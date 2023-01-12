@@ -4,7 +4,7 @@ import SelectPanelView from './_SelectPanelView'
 
 interface Props {
 	onValuesChange(newValues: any[]): any
-	values: any[],
+	values: SelectBoxOption[],
 	wide?: boolean,
 	error?: any,
 	className?: string,
@@ -20,11 +20,13 @@ export default function MultiSelect({
 	options,
 }:Props) {
 	const clickHandler = (opt:SelectBoxOption) => {
-		if (values.includes(opt.value)) {
-			return onValuesChange(values.filter(v => v!==opt.value))
+		const alreadyActive = values.find(v => v.value === opt.value)
+		
+		if (alreadyActive) {
+			return onValuesChange(values.filter(v => v.value!==opt.value))
 		}
 		
-		onValuesChange([...values, opt.value])
+		onValuesChange([...values, opt])
 	}
 	
 	return (

@@ -7,7 +7,7 @@ import SelectPanelView from './_SelectPanelView'
 
 interface Props {
 	onValueChange(newValue: SelectBoxOption): any
-	value: any,
+	value: SelectBoxOption,
 	wide?: boolean,
 	error?: any,
 	className?: string,

@@ -8,7 +8,7 @@ export type SelectBoxOption = { label: string, value: any }
 
 interface Props {
 	onValueChange(newValue:SelectBoxOption):any
-	value: any,
+	value: SelectBoxOption,
 	wide?: boolean,
 	error?: any,
 	className?: string,

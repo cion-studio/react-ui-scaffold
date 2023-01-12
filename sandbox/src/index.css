@@ -1,13 +1,230 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  width: 100%;
+  width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  color: var(--mainTextColor);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --cardBG: white;
+  --cardAltBG: rgb(244, 243, 243);
+  --bodyBG: rgb(255, 255, 255);
+
+  --navColor: #fcf8f9;
+  --navTextColor: #9c8d92;
+  --navAccentColor: rgb(234, 37, 95);
+
+  --borderColor: #e1dddf;
+
+  --mainTextColor: #2e2c2c;
+  --lightTextColor: rgb(138, 143, 147);
+
+  --smallRadius: 6px;
+  --largeRadius: 10px;
+
+
+  /* RGB Values for accent colors */
+  --positiveAccentValues: 41, 172, 41;
+  --neutralAccentValues: 234, 37, 95;
+  --negativeAccentValues: 255, 0, 42;
+  --warningAccentValues: 241, 148, 17;
+
+
+  --positiveAccentColor: rgb(var(--positiveAccentValues));
+  --neutralAccentColor: rgb(var(--neutralAccentValues));
+  --negativeAccentColor: rgb(var(--negativeAccentValues));
+  --warningAccentColor: rgb(var(--warningAccentValues));
+
+  --cardGradient: linear-gradient(169deg, rgba(228, 245, 255, 1) 22%, rgba(255, 225, 225, 1) 100%);
+
+  --pageMargins: 70px;
+}
+
+.flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flexY {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.flexX {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.half {
+  width: 50%;
+}
+
+.thinContainer {
+  width: min(100%, 700px);
+  flex-wrap: wrap;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.light {
+  color: var(--lightTextColor);
+}
+
+.nav {
+  background-color: var(--navColor);
+  color: var(--navTextColor);
+}
+
+.nav .accent {
+  color: var(--navAccentColor);
+}
+
+/* Links */
+a:hover {
+  color: var(--neutralAccentColor);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Buttons */
+.button {
+  --buttonAccentColor: var(--neutralAccentColor);
+  color: white;
+  border: none;
+  background-color: var(--buttonAccentColor);
+  padding: 8px 12px;
+  border-radius: var(--smallRadius);
+  cursor: pointer;
+  outline: none !important;
+  font-size: 15px;
+  font-family: inherit;
+  font-weight: bold;
+}
+
+.button.plain {
+  color: inherit;
+  background-color: transparent;
+  font-size: inherit;
+  padding: 0;
+}
+
+.button.plain.positive,
+.button.plain.negative,
+.button.plain.neutral {
+  color: var(--buttonAccentColor);
+}
+
+.button.hollow:hover {
+  filter: brightness(98%);
+}
+
+.button:hover {
+  filter: brightness(115%);
+}
+
+.button:active {
+  filter: brightness(95%);
+}
+
+button.positive {
+  --buttonAccentColor: var(--positiveAccentColor);
+}
+
+button.negative {
+  --buttonAccentColor: var(--negativeAccentColor);
+}
+
+.button.hollow {
+  border: 1px solid var(--buttonAccentColor);
+  background-color: var(--bodyBG);
+  color: var(--buttonAccentColor);
+}
+
+.button.hollow:not(.neutral):not(.negative):not(.positive) {
+  color: var(--mainTextColor);
+  border: 1px solid var(--borderColor);
+}
+
+.button:disabled {
+  cursor: default;
+  filter: grayscale(70%) brightness(80%) opacity(80%);
+}
+
+.button.cion {
+  font-weight: bold;
+  background: linear-gradient(90deg, rgba(234, 35, 95, 1) 0%, rgba(242, 97, 75, 1) 100%);
+}
+
+button.light,
+button.light.plain {
+  --buttonAccentColor: var(--lightTextColor);
+  color: var(--lightTextColor);
+}
+
+.wide {
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+span.wide,
+label.wide {
+  display: block;
+}
+
+textarea.input {
+  min-height: 40px;
+  font-family: inherit;
+}
+
+div.line {
+  padding: 0;
+  margin: 10px 0;
+  border-top: 1px solid var(--borderColor);
+}
+
+/* Responsiveness */
+.mobile .noMobile {
+  display: none;
+}
+
+.tablet .noTablet {
+  display: none;
+}
+
+.desktop .noDesktop {
+  display: none;
+}
+
+.mobile .desktopOnly,
+.tablet .desktopOnly {
+  display: none;
 }

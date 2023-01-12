@@ -19,12 +19,12 @@ interface BaseProps {
 }
 
 interface PropsWithSingleValue extends BaseProps {
-	value: any
+	value: SelectBoxOption
 	values?: null | undefined
 }
 
 interface PropsWithMultipleValues extends BaseProps {
-	values: any[]
+	values: SelectBoxOption[]
 	value?: null | undefined
 }
 
@@ -52,11 +52,9 @@ export default function SelectPanelView({
 		}
 		
 		return values.reduce((acc, curr) => {
-			const opt = options.find(p => p.value === curr)
-			acc[curr] = opt
-			
+			acc[curr.value] = true
 			return acc
-		}, {})
+		}, {} as {[s:string]:Boolean})
 	}, [values])
 	
 	const isActive = (option:SelectBoxOption) => {
@@ -64,14 +62,14 @@ export default function SelectPanelView({
 			return valuesHash[option.value]
 		}
 		
-		return option.value === value
+		return option.value === value?.value
 	}
 	
 	const multipleValuesLabel = useMemo(() => {
 		if (!values) return ''
 		
 		return values.reduce((acc, curr) => {
-			return `${acc}, ${valuesHash[curr].label}`
+			return `${acc}, ${curr.label}`
 		}, '').replace(',', '')
 	}, [values])
 	
@@ -97,18 +95,6 @@ export default function SelectPanelView({
 		})}
 	</>
 	
-	const [activeOption, setActiveOption] = useState(() => {
-		return options.find(opt => opt.value === value)
-	})
-	
-	useEffect(() => {
-		const newActive = options.find(opt => opt.value === value)
-
-		if (newActive) {
-			setActiveOption(newActive)
-		}
-	}, [options, value])
-	
 	const wideClass = wide ? 'wide' : ''
 	
 	return <PanelButton
@@ -122,7 +108,7 @@ export default function SelectPanelView({
 		style={style}
 	>
 		{!values && <>
-			{activeOption?.label || ''} <span className="caret">
+			{value?.label || ''} <span className="caret">
 				<FontAwesomeIcon icon={faCaretDown} />
 			</span>
 		</>}
